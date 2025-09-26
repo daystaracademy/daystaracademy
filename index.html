@@ -17,9 +17,11 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#85bb65', // 黄绿色主色调
-                        secondary: '#f0e68c', // 黄绿色辅助色
-                        dark: '#2d572c', // 深绿色
+                        primary: '#ebae3c', 
+                        secondary: '#43974e', 
+                        primaryLight: '#f8d58f', 
+                        secondaryLight: '#77b980', 
+                        dark: '#2d3748',
                         light: '#f9fafb'
                     },
                     fontFamily: {
@@ -52,18 +54,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        
-        .project-card:hover .project-overlay {
-            opacity: 0.9;
-        }
-        
-        .project-card:hover img {
-            transform: scale(1.05);
-        }
-        
-        .skill-bar {
-            transition: width 1s ease-in-out;
-        }
     </style>
 </head>
 <body class="bg-light text-dark font-inter">
@@ -85,7 +75,7 @@
             
             <!-- Mobile Menu Button -->
             <button id="menu-toggle" class="md:hidden text-2xl">
-                <i class="fa fa-bars"></i>
+                <i class="fa fa-bars text-primary"></i>
             </button>
         </div>
         
@@ -102,7 +92,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 bg-gradient-to-b from-green-50 to-white">
+        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 bg-gradient-to-b from-yellow-50 to-white">
             <div class="container mx-auto max-w-6xl">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2">
@@ -111,22 +101,22 @@
                             <br>促进启明星和谐友善校园环境
                         </h1>
                         <p class="text-lg text-gray-600 mb-8 max-w-lg">
-                            启明星学校始终将尊重、诚信、安全作为一贯秉持的核心价值观。然而近期，该校校园内却频繁出现诸多不友善行为，例如有同学在课堂上大吵大闹，严重破坏了课堂环境。
+                            启明星学校始终将尊重、诚信、安全作为核心价值观，却频现不友善行为，破坏课堂环境。
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="#events" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-custom flex items-center gap-2">
                                 <span>了解更多</span>
                                 <i class="fa fa-arrow-right"></i>
                             </a>
-                            <a href="#contact" class="bg-white border border-gray-300 hover:border-primary text-dark px-6 py-3 rounded-lg font-medium transition-custom">
-                                贡献一份力量
+                            <a href="#contact" class="bg-white border border-gray-300 hover:border-secondary text-dark px-6 py-3 rounded-lg font-medium transition-custom">
+                                贡献力量
                             </a>
                         </div>
                     </div>
                     
                     <div class="md:w-1/2 relative">
-                        <div class="relative z-10 rounded-full overflow-hidden border-4 border-white shadow-xl transform hover:scale-105 transition-custom">
-                            <img src="https://picsum.photos/id/1012/600/600" alt="校园环境" class="w-full max-w-md mx-auto">
+                        <div class="relative z-10 rounded-xl overflow-hidden border-4 border-white shadow-xl transform hover:scale-105 transition-custom">
+                            <img src="https://picsum.photos/id/24/600/600" alt="启明星学校校园环境" class="w-full max-w-md mx-auto">
                         </div>
                         <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full -z-10"></div>
                         <div class="absolute -top-6 -left-6 w-24 h-24 bg-secondary/20 rounded-full -z-10"></div>
@@ -136,90 +126,55 @@
         </section>
         
         <!-- Events Section -->
-        <section id="events" class="py-20 px-4">
+        <section id="events" class="py-16 px-4">
             <div class="container mx-auto max-w-6xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">最近发生了什么？</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">2025年5月，启明星学校发生一起严重扰乱教学秩序的事件。据查，某学生在课堂期间大吵大闹，致使正常教学活动无法开展，造成恶劣影响。现将该生违规行为现场视频予以公示，望全体师生引以为戒。全体教职员工及学生须共同营造风清气正的校园环境，严格恪守廉洁自律准则。此举既是对教育公平性的维护，亦与启明星学校“崇德尚廉、笃学致远”的核心价值理念高度契合。</p>
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4 text-secondary">最近发生了什么？</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">2025年5月，启明星学校某学生课堂大吵大闹，致教学无法开展。望师生引以为戒，共筑清廉校园。</p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Event 1 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom">
                         <div class="relative overflow-hidden h-56">
-                            <img src="https://picsum.photos/id/180/600/400" alt="课堂秩序事件" class="w-full h-full object-cover transition-transform duration-500">
-                            <div class="project-overlay absolute inset-0 bg-primary flex items-center justify-center opacity-0 transition-custom">
+                            <img src="https://picsum.photos/id/20/600/400" alt="课堂秩序事件" class="w-full h-full object-cover transition-transform duration-500">
+                            <div class="absolute inset-0 bg-primary flex items-center justify-center opacity-0 hover:opacity-90 transition-custom">
                                 <a href="#" class="bg-white text-primary px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-custom">
                                     查看详情
                                 </a>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">课堂秩序事件</h3>
-                            <p class="text-gray-600 mb-4">某学生在课堂期间大吵大闹，致使正常教学活动无法开展，造成恶劣影响。</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">违纪事件</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">课堂秩序</span>
-                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-secondary">课堂秩序事件</h3>
+                            <p class="text-gray-600 mb-4">某学生课堂大吵大闹，致教学无法开展，影响恶劣。</p>
                         </div>
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom">
                         <div class="relative overflow-hidden h-56">
-                            <img src="https://picsum.photos/id/0/600/400" alt="校园倡议活动" class="w-full h-full object-cover transition-transform duration-500">
-                            <div class="project-overlay absolute inset-0 bg-primary flex items-center justify-center opacity-0 transition-custom">
+                            <img src="https://picsum.photos/id/26/600/400" alt="校园倡议活动" class="w-full h-full object-cover transition-transform duration-500">
+                            <div class="absolute inset-0 bg-primary flex items-center justify-center opacity-0 hover:opacity-90 transition-custom">
                                 <a href="#" class="bg-white text-primary px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-custom">
                                     查看详情
                                 </a>
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">清廉校园倡议</h3>
-                            <p class="text-gray-600 mb-4">学校发起清廉校园倡议，号召全体师生共同维护风清气正的校园环境。</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">倡议活动</span>
-                                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">校园文化</span>
-                            </div>
+                            <h3 class="text-xl font-semibold mb-2 text-secondary">清廉校园倡议</h3>
+                            <p class="text-gray-600 mb-4">学校发起倡议，号召师生共护风清气正校园环境。</p>
                         </div>
                     </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom">
-                        <div class="relative overflow-hidden h-56">
-                            <img src="https://picsum.photos/id/160/600/400" alt="校园和谐活动" class="w-full h-full object-cover transition-transform duration-500">
-                            <div class="project-overlay absolute inset-0 bg-primary flex items-center justify-center opacity-0 transition-custom">
-                                <a href="#" class="bg-white text-primary px-4 py-2 rounded-lg font-medium hover:bg-gray-100 transition-custom">
-                                    查看详情
-                                </a>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2">和谐校园活动</h3>
-                            <p class="text-gray-600 mb-4">开展系列和谐校园活动，促进师生之间的友好交流与合作。</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">校园活动</span>
-                                <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">和谐友善</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-12">
-                    <a href="#" class="inline-flex items-center gap-2 text-primary font-medium hover:underline">
-                        <span>查看所有事件</span>
-                        <i class="fa fa-external-link"></i>
-                    </a>
                 </div>
             </div>
         </section>
         
         <!-- About Section -->
-        <section id="about" class="py-20 px-4 bg-gray-50">
+        <section id="about" class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-6xl">
                 <div class="flex flex-col lg:flex-row gap-12 items-center">
                     <div class="lg:w-2/5 relative">
-                        <img src="https://picsum.photos/id/1025/600/800" alt="关于倡议" class="w-full rounded-xl shadow-lg">
+                        <img src="https://picsum.photos/id/28/600/800" alt="关于清廉校园倡议" class="w-full rounded-xl shadow-lg">
                         <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
                             <p class="text-3xl font-bold text-primary">共创</p>
                             <p class="text-gray-600">和谐校园</p>
@@ -227,57 +182,11 @@
                     </div>
                     
                     <div class="lg:w-3/5">
-                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6">关于清廉校园倡议</h2>
-                        <p class="text-gray-600 mb-6 text-lg">
-                            启明星学校始终致力于营造一个尊重、诚信、安全的校园环境，这是学校一贯秉持的核心价值观。然而近期，校园内却频繁出现诸多不友善行为，严重影响了教学秩序和校园氛围。
-                        </p>
+                        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6 text-secondary">关于清廉校园倡议</h2>
                         <p class="text-gray-600 mb-8 text-lg">
-                            为此，学校发起“清廉校园”倡议，号召全体师生共同行动起来，严格恪守廉洁自律准则，维护教育公平性，共同营造风清气正的校园环境，让启明星学校真正成为师生成长的美好家园。
+                            启明星学校致力于营造尊重、诚信、安全的校园环境，却频现不友善行为。为此发起"清廉校园"倡议，号召师生恪守廉洁自律准则，维护教育公平，共筑美好校园。
                         </p>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
-                                    <i class="fa fa-handshake-o text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">尊重他人</h3>
-                                    <p class="text-gray-600">倡导师生之间、同学之间相互尊重，营造友善氛围。</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
-                                    <i class="fa fa-shield text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">维护秩序</h3>
-                                    <p class="text-gray-600">共同维护课堂及校园公共区域的正常秩序。</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
-                                    <i class="fa fa-balance-scale text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">教育公平</h3>
-                                    <p class="text-gray-600">坚守教育公平原则，为每一位学生提供平等机会。</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
-                                    <i class="fa fa-heart text-xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">关爱校园</h3>
-                                    <p class="text-gray-600">以爱心对待校园的一草一木和每一位师生。</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <a href="#contact" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-medium transition-custom">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg font-medium transition-custom">
                             <span>联系我们</span>
                             <i class="fa fa-arrow-right"></i>
                         </a>
@@ -287,8 +196,106 @@
         </section>
         
         <!-- Contact Section -->
-        <section id="contact" class="py-20 px-4 bg-gray-50">
+        <section id="contact" class="py-16 px-4 bg-gray-50">
             <div class="container mx-auto max-w-6xl">
-                <div class="text-center mb-16">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">联系我们</h2>
-                    <p class="text-gray-6
+                <div class="text-center mb-12">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4 text-secondary">联系我们</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">若有问题、建议或想为清廉校园建设出力，可通过以下方式联系。</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-secondary">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">邮箱</h4>
+                                    <a href="mailto:contact@qimingxing.edu.cn" class="text-gray-600 hover:text-primary transition-custom">contact@qimingxing.edu.cn</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="bg-primary/10 p-3 rounded-lg text-primary">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium mb-1">电话</h4>
+                                    <a href="tel:+8612345678901" class="text-gray-600 hover:text-primary transition-custom">+86 (123) 4567-8901</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6 text-secondary">发送留言</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">您的姓名</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的姓名" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">您的邮箱</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的邮箱" required>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">您的留言</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的留言内容..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-custom flex items-center justify-center gap-2">
+                                <span>发送留言</span>
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <img src="daystar-logo.png" alt="启明星学校logo" class="w-8 h-8">
+                        <span>启明星学校</span>
+                    </a>
+                    <p class="text-gray-400 mt-2">崇德尚廉、笃学致远</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-custom">
+                        <i class="fa fa-weixin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-custom">
+                        <i class="fa fa-weibo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 启明星学校. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+    
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu
