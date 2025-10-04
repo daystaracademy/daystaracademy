@@ -107,7 +107,7 @@
             if (enteredPassword === CORRECT_PASSWORD) {
                 // 密码正确，存储验证状态并跳转到主页面
                 localStorage.setItem('isAuthenticated', 'true');
-                window.location.href = 'main.html'; // 跳转到主页面
+                window.location.href = 'thatswassup.html'; // 跳转到主页面
             } else {
                 // 密码错误，显示错误信息
                 errorMessage.classList.remove('hidden');
@@ -125,7 +125,7 @@
         
         // 检查是否已经登录，如果是则直接跳转到主页面
         if (localStorage.getItem('isAuthenticated') === 'true') {
-            window.location.href = 'main.html';
+            window.location.href = 'thatswassup.html';
         }
     </script>
 </body>
